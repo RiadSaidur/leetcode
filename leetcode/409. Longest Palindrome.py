@@ -1,0 +1,25 @@
+from collections import Counter
+
+
+s = "abccccdd"
+s1 = "a"
+s3 = "abbauUUUU"
+s4 = "civilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisaltogetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth"
+
+def longestPalindrome(s: str) -> int:
+  charMap = Counter(s)
+
+  length = 0
+
+  for char in charMap.values():
+    if char%2 and length%2:
+      length += char - 1  
+    else:
+      length += char
+
+  return length
+
+print(longestPalindrome(s))
+print(longestPalindrome(s1))
+print(longestPalindrome(s3))
+print(longestPalindrome(s4))
