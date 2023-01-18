@@ -18,7 +18,7 @@ def intersect(nums1: List[int], nums2: List[int]) -> List[int]:
   
   return result
 
-def sortedIntersect(nums1: List[int], nums2: List[int]) -> List[int]:
+def afterSortedIntersect(nums1: List[int], nums2: List[int]) -> List[int]:
   if not nums1 or not nums2:
     return []
 
@@ -42,7 +42,7 @@ def sortedIntersect(nums1: List[int], nums2: List[int]) -> List[int]:
     
   return result
       
-def afterSortedIntersect(nums1: List[int], nums2: List[int]) -> List[int]:
+def sortedIntersect(nums1: List[int], nums2: List[int]) -> List[int]:
   if not nums1 or not nums2:
     return []
 
