@@ -16,10 +16,7 @@ def isValid(s: str) -> bool:
     else:
       stack.append(char)
     
-  if stack:
-    return False
-  else:
-    return True
+  return not stack
 
 
-print(isValid("(({{[[()]]}}))]"))
+print(isValid("(({{[[()]]}}))"))
